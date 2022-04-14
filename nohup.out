@@ -1,6 +1,6 @@
 [ info ]  building project...
 [ info ]  starting http server...
-[1649714202290] [32mINFO[39m (Sensores/1561 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
+[1649814252010] [32mINFO[39m (Sensores/8971 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
 [ info ]  watching file system for changes
 ╭─────────────────────────────────────────────────╮
 │                                                 │
@@ -8,398 +8,34 @@
 │    Watching filesystem for changes: YES         │
 │                                                 │
 ╰─────────────────────────────────────────────────╯
-ADD: app/Models/Sensor.ts
+UPDATE: config/cors.ts
 [ info ]  re-starting http server...
-UPDATE: app/Models/Sensor.ts
+UPDATE: config/cors.ts
 [ info ]  re-starting http server...
-[1649801840310] [32mINFO[39m (Sensores/5720 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
+[1649883880270] [32mINFO[39m (Sensores/11897 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
 ╭─────────────────────────────────────────────────╮
 │                                                 │
 │    Server address: http://127.0.0.1:3333        │
 │    Watching filesystem for changes: YES         │
 │                                                 │
 ╰─────────────────────────────────────────────────╯
-UPDATE: app/Models/Sensor.ts
+ADD: database/seeders/User.ts
 [ info ]  re-starting http server...
-[1649802022169] [32mINFO[39m (Sensores/5732 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
+UPDATE: database/seeders/User.ts
+[ info ]  re-starting http server...
+[1649969195637] [32mINFO[39m (Sensores/17093 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
 ╭─────────────────────────────────────────────────╮
 │                                                 │
 │    Server address: http://127.0.0.1:3333        │
 │    Watching filesystem for changes: YES         │
 │                                                 │
 ╰─────────────────────────────────────────────────╯
-UPDATE: app/Models/Sensor.ts
+UPDATE: database/seeders/User.ts
 [ info ]  re-starting http server...
-[1649802047630] [32mINFO[39m (Sensores/5742 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
+[1649969473977] [32mINFO[39m (Sensores/17124 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
 ╭─────────────────────────────────────────────────╮
 │                                                 │
 │    Server address: http://127.0.0.1:3333        │
 │    Watching filesystem for changes: YES         │
 │                                                 │
 ╰─────────────────────────────────────────────────╯
-ADD: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649802149278] [32mINFO[39m (Sensores/5777 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649802286095] [32mINFO[39m (Sensores/5790 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-UPDATE: start/routes.ts
-[ info ]  re-starting http server...
-start/routes.ts(27,1): error TS1128: Declaration or statement expected.
-start/routes.ts(27,2): error TS1128: Declaration or statement expected.
-start/routes.ts(27,3): error TS1128: Declaration or statement expected.
-
-
- [41m[37m ReferenceError [39m[49m
-
- middleware is not defined
-
- at [33mObject.<anonymous>[39m [32m/home/ubuntu/Sensores/start/routes.ts[39m:[32m27[39m
-  [2m22[22m[2m|[22m  Route.group(()=>{
-  [2m23[22m[2m|[22m      Route.post('/guardarSensor/:request','SensorController.guardarMongo')
-  [2m24[22m[2m|[22m  })
-  [2m25[22m[2m|[22m  
-  [2m26[22m[2m|[22m  
-[31m❯[39m [31m27[39m[31m|[39m  [31m}).middleware('auth:api')[39m
-  [2m28[22m[2m|[22m  Route.post('/login/:request','AuthController.Login')
-  [2m29[22m[2m|[22m  Route.post('/storeUser/:request','UsuariosController.store')
-  [2m30[22m[2m|[22m  
-
-   [2m1[22m  [33mModule._compile[39m
-     [32m/home/ubuntu/Sensores/node_modules/pirates/lib/index.js[39m:[32m136[39m
-
-   [2m2[22m  [33mObject.newLoader [as .ts][39m
-     [32m/home/ubuntu/Sensores/node_modules/pirates/lib/index.js[39m:[32m141[39m
-
-   [2m3[22m  [33mApplication.resolveModule[39m
-     [32m/home/ubuntu/Sensores/node_modules/@adonisjs/application/build/src/Application.js[39m:[32m155[39m
-
-[ warn ]  Underlying HTTP server died with "0 code"
-UPDATE: start/routes.ts
-[ info ]  re-starting http server...
-[1649802425637] [32mINFO[39m (Sensores/5818 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-[1649802528866] [33mWARN[39m (Sensores/5818 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
-[1649802552736] [31mERROR[39m (Sensores/5818 on ip-172-31-27-195): [36mmongoose is not defined[39m
-    err: {
-      "type": "ReferenceError",
-      "message": "mongoose is not defined",
-      "stack":
-          ReferenceError: mongoose is not defined
-              at SensoresController.guardarMongo (/home/ubuntu/Sensores/app/Controllers/Http/SensoresController.ts:26:13)
-              at Injector.callAsync (/home/ubuntu/Sensores/node_modules/@adonisjs/fold/build/src/Ioc/Injector.js:124:30)
-              at processTicksAndRejections (node:internal/process/task_queues:96:5)
-      "status": 500
-    }
-[1649802578494] [33mWARN[39m (Sensores/5818 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649802648724] [32mINFO[39m (Sensores/5837 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649802712589] [32mINFO[39m (Sensores/5851 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649802781816] [32mINFO[39m (Sensores/5864 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-[1649802794853] [31mERROR[39m (Sensores/5864 on ip-172-31-27-195): [36mCan't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections[39m
-    err: {
-      "type": "MongooseError",
-      "message": "Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections",
-      "stack":
-          MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
-              at NativeConnection.Connection.openUri (/home/ubuntu/Sensores/node_modules/mongoose/lib/connection.js:702:13)
-              at /home/ubuntu/Sensores/node_modules/mongoose/lib/index.js:340:10
-              at /home/ubuntu/Sensores/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
-              at new Promise (<anonymous>)
-              at promiseOrCallback (/home/ubuntu/Sensores/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
-              at Mongoose._promiseOrCallback (/home/ubuntu/Sensores/node_modules/mongoose/lib/index.js:1174:10)
-              at Mongoose.connect (/home/ubuntu/Sensores/node_modules/mongoose/lib/index.js:339:20)
-              at SensoresController.guardarMongo (/home/ubuntu/Sensores/app/Controllers/Http/SensoresController.ts:27:28)
-              at processTicksAndRejections (node:internal/process/task_queues:96:5)
-              at Object.PreCompiler.runRouteHandler [as fn] (/home/ubuntu/Sensores/node_modules/@adonisjs/http-server/build/src/Server/PreCompiler/index.js:47:31)
-      "status": 500
-    }
-[1649802889993] [31mERROR[39m (Sensores/5864 on ip-172-31-27-195): [36mCan't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections[39m
-    err: {
-      "type": "MongooseError",
-      "message": "Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections",
-      "stack":
-          MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
-              at NativeConnection.Connection.openUri (/home/ubuntu/Sensores/node_modules/mongoose/lib/connection.js:702:13)
-              at /home/ubuntu/Sensores/node_modules/mongoose/lib/index.js:340:10
-              at /home/ubuntu/Sensores/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
-              at new Promise (<anonymous>)
-              at promiseOrCallback (/home/ubuntu/Sensores/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
-              at Mongoose._promiseOrCallback (/home/ubuntu/Sensores/node_modules/mongoose/lib/index.js:1174:10)
-              at Mongoose.connect (/home/ubuntu/Sensores/node_modules/mongoose/lib/index.js:339:20)
-              at SensoresController.guardarMongo (/home/ubuntu/Sensores/app/Controllers/Http/SensoresController.ts:27:28)
-              at processTicksAndRejections (node:internal/process/task_queues:96:5)
-              at Object.PreCompiler.runRouteHandler [as fn] (/home/ubuntu/Sensores/node_modules/@adonisjs/http-server/build/src/Server/PreCompiler/index.js:47:31)
-      "status": 500
-    }
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649802956075] [32mINFO[39m (Sensores/5894 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649803149068] [32mINFO[39m (Sensores/5919 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-UPDATE: app/Models/Sensor.ts
-[ info ]  re-starting http server...
-[1649803272685] [32mINFO[39m (Sensores/5988 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649803384180] [32mINFO[39m (Sensores/6002 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-app/Controllers/Http/SensoresController.ts(24,1): error TS1128: Declaration or statement expected.
-
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649803538647] [32mINFO[39m (Sensores/6021 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649803560956] [32mINFO[39m (Sensores/6034 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-[1649803563437] [41mFATAL[49m (Sensores/6034 on ip-172-31-27-195): [36m"uncaughtException" detected[39m
-    MongoServerError: not primary
-        at MessageStream.messageHandler (/home/ubuntu/Sensores/node_modules/mongodb/src/cmap/connection.ts:753:20)
-        at MessageStream.emit (node:events:527:28)
-        at processIncomingData (/home/ubuntu/Sensores/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
-        at MessageStream._write (/home/ubuntu/Sensores/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
-        at writeOrBuffer (node:internal/streams/writable:390:12)
-        at _write (node:internal/streams/writable:331:10)
-        at MessageStream.Writable.write (node:internal/streams/writable:335:10)
-        at Socket.ondata (node:internal/streams/readable:777:22)
-        at Socket.emit (node:events:527:28)
-        at addChunk (node:internal/streams/readable:324:12)
-[1649803563524] [33mWARN[39m (Sensores/6034 on ip-172-31-27-195): [36mpino.final with prettyPrint does not support flushing[39m
-
-/home/ubuntu/Sensores/node_modules/mongodb/src/cmap/connection.ts:753
-          callback(new MongoServerError(document));
-                   ^
-MongoServerError: not primary
-    at MessageStream.messageHandler (/home/ubuntu/Sensores/node_modules/mongodb/src/cmap/connection.ts:753:20)
-    at MessageStream.emit (node:events:527:28)
-    at processIncomingData (/home/ubuntu/Sensores/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
-    at MessageStream._write (/home/ubuntu/Sensores/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
-    at writeOrBuffer (node:internal/streams/writable:390:12)
-    at _write (node:internal/streams/writable:331:10)
-    at MessageStream.Writable.write (node:internal/streams/writable:335:10)
-    at Socket.ondata (node:internal/streams/readable:777:22)
-    at Socket.emit (node:events:527:28)
-    at addChunk (node:internal/streams/readable:324:12)
-[ warn ]  Underlying HTTP server died with "1 code"
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649803585481] [32mINFO[39m (Sensores/6049 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-[1649803589412] [31mERROR[39m (Sensores/6049 on ip-172-31-27-195): [36mInvalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"[39m
-    err: {
-      "type": "MongoParseError",
-      "message": "Invalid scheme, expected connection string to start with \"mongodb://\" or \"mongodb+srv://\"",
-      "stack":
-          MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
-              at new ConnectionString (/home/ubuntu/Sensores/node_modules/mongodb-connection-string-url/src/index.ts:133:13)
-              at parseOptions (/home/ubuntu/Sensores/node_modules/mongodb/src/connection_string.ts:259:15)
-              at new MongoClient (/home/ubuntu/Sensores/node_modules/mongodb/src/mongo_client.ts:347:34)
-              at /home/ubuntu/Sensores/node_modules/mongoose/lib/connection.js:784:16
-              at new Promise (<anonymous>)
-              at NativeConnection.Connection.openUri (/home/ubuntu/Sensores/node_modules/mongoose/lib/connection.js:781:19)
-              at /home/ubuntu/Sensores/node_modules/mongoose/lib/index.js:340:10
-              at /home/ubuntu/Sensores/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
-              at new Promise (<anonymous>)
-              at promiseOrCallback (/home/ubuntu/Sensores/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
-      "status": 500
-    }
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649803615216] [32mINFO[39m (Sensores/6063 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649806649740] [32mINFO[39m (Sensores/6895 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-UPDATE: start/routes.ts
-[ info ]  re-starting http server...
-[1649806761300] [32mINFO[39m (Sensores/6907 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-[1649806787158] [31mERROR[39m (Sensores/6907 on ip-172-31-27-195): [36mCan't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections[39m
-    err: {
-      "type": "MongooseError",
-      "message": "Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections",
-      "stack":
-          MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
-              at NativeConnection.Connection.openUri (/home/ubuntu/Sensores/node_modules/mongoose/lib/connection.js:702:13)
-              at /home/ubuntu/Sensores/node_modules/mongoose/lib/index.js:340:10
-              at /home/ubuntu/Sensores/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
-              at new Promise (<anonymous>)
-              at promiseOrCallback (/home/ubuntu/Sensores/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
-              at Mongoose._promiseOrCallback (/home/ubuntu/Sensores/node_modules/mongoose/lib/index.js:1174:10)
-              at Mongoose.connect (/home/ubuntu/Sensores/node_modules/mongoose/lib/index.js:339:20)
-              at SensoresController.verSensor (/home/ubuntu/Sensores/app/Controllers/Http/SensoresController.ts:51:28)
-              at processTicksAndRejections (node:internal/process/task_queues:96:5)
-              at Object.PreCompiler.runRouteHandler [as fn] (/home/ubuntu/Sensores/node_modules/@adonisjs/http-server/build/src/Server/PreCompiler/index.js:47:31)
-      "status": 500
-    }
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649806829784] [32mINFO[39m (Sensores/6922 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-[1649806832819] [31mERROR[39m (Sensores/6922 on ip-172-31-27-195): [36mCan't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections[39m
-    err: {
-      "type": "MongooseError",
-      "message": "Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections",
-      "stack":
-          MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
-              at NativeConnection.Connection.openUri (/home/ubuntu/Sensores/node_modules/mongoose/lib/connection.js:702:13)
-              at /home/ubuntu/Sensores/node_modules/mongoose/lib/index.js:340:10
-              at /home/ubuntu/Sensores/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
-              at new Promise (<anonymous>)
-              at promiseOrCallback (/home/ubuntu/Sensores/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
-              at Mongoose._promiseOrCallback (/home/ubuntu/Sensores/node_modules/mongoose/lib/index.js:1174:10)
-              at Mongoose.connect (/home/ubuntu/Sensores/node_modules/mongoose/lib/index.js:339:20)
-              at SensoresController.verSensor (/home/ubuntu/Sensores/app/Controllers/Http/SensoresController.ts:51:28)
-              at processTicksAndRejections (node:internal/process/task_queues:96:5)
-              at Object.PreCompiler.runRouteHandler [as fn] (/home/ubuntu/Sensores/node_modules/@adonisjs/http-server/build/src/Server/PreCompiler/index.js:47:31)
-      "status": 500
-    }
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649806869703] [32mINFO[39m (Sensores/6936 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649806897119] [32mINFO[39m (Sensores/6949 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-UPDATE: app/Controllers/Http/SensoresController.ts
-[ info ]  re-starting http server...
-[1649807131696] [32mINFO[39m (Sensores/6967 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-UPDATE: start/routes.ts
-[ info ]  re-starting http server...
-[1649807223780] [32mINFO[39m (Sensores/6979 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-[ error ]  ENOSPC: System limit for number of file watchers reached, watch '/home/ubuntu/Sensores/.git/objects/25/64e1d0f6bc2f3a49adb29f723cface97e2a78a'
-    at FSWatcher.<computed> (node:internal/fs/watchers:244:19)
-    at Object.watch (node:fs:2264:34)
-    at createFsWatchInstance (/home/ubuntu/Sensores/node_modules/chokidar/lib/nodefs-handler.js:119:15)
-    at setFsWatchListener (/home/ubuntu/Sensores/node_modules/chokidar/lib/nodefs-handler.js:166:15)
-    at NodeFsHandler._watchWithNodeFs (/home/ubuntu/Sensores/node_modules/chokidar/lib/nodefs-handler.js:331:14)
-    at NodeFsHandler._handleFile (/home/ubuntu/Sensores/node_modules/chokidar/lib/nodefs-handler.js:395:23)
-    at NodeFsHandler._addToNodeFs (/home/ubuntu/Sensores/node_modules/chokidar/lib/nodefs-handler.js:637:21)
-[ info ]  shutting down
