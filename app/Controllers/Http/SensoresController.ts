@@ -67,6 +67,23 @@ export default class SensoresController
             response=await SensorModelo.SensorModelo.find()
             return response
         }
-    }  
-}
- 
+    }
+    public async modificar({request,response})
+    {
+        try
+        {
+            await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+            const id=request.input('id')
+            response= await SensorModelo.SensorModelo.updateOne({"id":id},{$pull:{"pin":{$gte:1}}},{$push:{"pin":[request.input('trigger'),request.input('echo')]}})
+            return response
+        }
+        catch
+        {
+//            await mongoose.connect('mongodb://3.145.210.35:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+//            const id=request.input('id')
+//            mod= await SensorModelo.SensorModelo.updateOne({"id":id},{$pull:{"pin":{$gte:1}}})
+//            response= await SensorModelo.SensorModelo.updateOne({"id":id},{$push:{"pin":[request.input('trigger'),request.input('echo')]}})
+//            return response
+        }
+    }
+} 

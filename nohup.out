@@ -1,41 +1,43 @@
 [ info ]  building project...
 [ info ]  starting http server...
-[1649814252010] [32mINFO[39m (Sensores/8971 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
+
+ [41m[37m RouterException [39m[49m
+
+ E_DUPLICATE_ROUTE: Duplicate route "GET:/verSensores"
+
+
+   [2m1[22m  [33mFunction.duplicateRoute[39m
+     [32m/home/ubuntu/Sensores/node_modules/@adonisjs/http-server/build/src/Exceptions/RouterException.js[39m:[32m32[39m
+
+   [2m2[22m  [33manonymous[39m
+     [32m/home/ubuntu/Sensores/node_modules/@adonisjs/http-server/build/src/Router/Store.js[39m:[32m155[39m
+
+   [2m3[22m  [33mStore.add[39m
+     [32m/home/ubuntu/Sensores/node_modules/@adonisjs/http-server/build/src/Router/Store.js[39m:[32m147[39m
+
+   [2m4[22m  [33manonymous[39m
+     [32m/home/ubuntu/Sensores/node_modules/@adonisjs/http-server/build/src/Router/index.js[39m:[32m268[39m
+
+   [2m5[22m  [33mRouter.commit[39m
+     [32m/home/ubuntu/Sensores/node_modules/@adonisjs/http-server/build/src/Router/index.js[39m:[32m243[39m
+
+   [2m6[22m  [33mServer.optimize[39m
+     [32m/home/ubuntu/Sensores/node_modules/@adonisjs/http-server/build/src/Server/index.js[39m:[32m147[39m
+
+   [2m7[22m  [33mcreateHttpServer[39m
+     [32m/home/ubuntu/Sensores/node_modules/@adonisjs/core/build/src/utils/index.js[39m:[32m40[39m
+
+   [2m8[22m  [33mHttpServer.createServer[39m
+     [32m/home/ubuntu/Sensores/node_modules/@adonisjs/core/build/src/Ignitor/HttpServer/index.js[39m:[32m58[39m
+
+[ warn ]  Underlying HTTP server died with "0 code"
 [ info ]  watching file system for changes
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-UPDATE: config/cors.ts
+UPDATE: start/routes.ts
 [ info ]  re-starting http server...
-UPDATE: config/cors.ts
-[ info ]  re-starting http server...
-[1649883880270] [32mINFO[39m (Sensores/11897 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-ADD: database/seeders/User.ts
-[ info ]  re-starting http server...
-UPDATE: database/seeders/User.ts
-[ info ]  re-starting http server...
-[1649969195637] [32mINFO[39m (Sensores/17093 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
-UPDATE: database/seeders/User.ts
-[ info ]  re-starting http server...
-[1649969473977] [32mINFO[39m (Sensores/17124 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
-╭─────────────────────────────────────────────────╮
-│                                                 │
-│    Server address: http://127.0.0.1:3333        │
-│    Watching filesystem for changes: YES         │
-│                                                 │
-╰─────────────────────────────────────────────────╯
+[1649995804218] [31mERROR[39m (Sensores/19410 on ip-172-31-27-195): [36mlisten EADDRINUSE: address already in use 0.0.0.0:3333[39m
+    Error: listen EADDRINUSE: address already in use 0.0.0.0:3333
+        at Server.setupListenHandle [as _listen2] (node:net:1372:16)
+        at listenInCluster (node:net:1420:12)
+        at doListen (node:net:1559:7)
+        at processTicksAndRejections (node:internal/process/task_queues:84:21)
+[ warn ]  Underlying HTTP server died with "0 code"

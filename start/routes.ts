@@ -23,6 +23,11 @@ Route.group(()=>{
     Route.post('/guardarSensor/:request','SensoresController.guardarMongo')
     Route.get('/verSensor/:id','SensoresController.verSensor')
     Route.get('/verSensores','SensoresController.verSensores')
+    Route.put('/modificarSensor/:request','SensoresController.modificar')
 }).middleware('auth:api')
 Route.post('/login/:request','AuthController.Login')
 Route.post('/storeUser/:request','UsuariosController.store')
+Route.get('/', (ctx) => {
+  ctx.response.send('hello world')
+})
+
