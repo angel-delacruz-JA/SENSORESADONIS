@@ -3,7 +3,7 @@ export default class SensorModelo
 {
     static sensorschema=new Schema({
     id:Number,
-    pin:[Number],
+    pin:[{trigger:Number,echo:Number}],
     tipo:String,
     clave:String
   },{
