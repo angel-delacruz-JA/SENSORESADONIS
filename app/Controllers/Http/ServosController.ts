@@ -8,15 +8,20 @@ export default class ServosController
         const value=request.input('value')
         try
         {
-        await mongoose.connect('mongodb://18.220.12.4:27017/servos?readPreference=primary&directConnection=true&ssl=false')
+        await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
         const status=await Cervos.Cervos.find()
-        if(status['value']==1)
+        const value=status[0]
+        if(value['value']==1)
         {
+            await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
             response= await Cervos.Cervos.updateOne({"id":1},{$set:{"value":0}})
+            return response
         }
         else
         {
+            await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
             response= await Cervos.Cervos.updateOne({"id":1},{$set:{"value":1}})
+            return response
         }
         return response
         }
