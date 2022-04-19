@@ -4,8 +4,6 @@ export default class Cervos {
   static cervoschema=new Schema({
     id:Number,
     value:Number,
-    fecha:String,
-    hora:Date
   },{
     versionKey:false
   });
