@@ -25,6 +25,7 @@ Route.group(()=>{
     Route.get('/verSensores','SensoresController.verSensores')
     Route.put('/modificarSensor/:request','SensoresController.modificar')
     Route.post('/guardarMedicion/:request','SensoresController.guardarMedicion')
+    Route.put('/cambiarStatus/:request','ServosController.cambiarStatus')
 }).middleware('auth:api')
 Route.post('/login/:request','AuthController.Login')
 Route.post('/storeUser/:request','UsuariosController.store')

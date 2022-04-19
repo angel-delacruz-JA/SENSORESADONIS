@@ -5,9 +5,9 @@ export default class UsuariosController
      public async store({auth,request,response})
     {
         const user=new User()
-	const nombre=request.input('Nombre')
-        const email=request.input('Email')
-        const password=request.input('Password')
+	const nombre=request.input('nombre')
+        const email=request.input('email')
+        const password=request.input('password')
         user.email=email
         user.password=password
 	user.nombre=nombre 

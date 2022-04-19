@@ -1,0 +1,231 @@
+[ info ]  building project...
+[ info ]  starting http server...
+[1650326770653] [32mINFO[39m (Sensores/1998 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
+[ info ]  watching file system for changes
+╭─────────────────────────────────────────────────╮
+│                                                 │
+│    Server address: http://127.0.0.1:3333        │
+│    Watching filesystem for changes: YES         │
+│                                                 │
+╰─────────────────────────────────────────────────╯
+[1650326850982] [33mWARN[39m (Sensores/1998 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650326851158] [33mWARN[39m (Sensores/1998 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650326894051] [33mWARN[39m (Sensores/1998 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650326894218] [33mWARN[39m (Sensores/1998 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650327255913] [33mWARN[39m (Sensores/1998 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650327256187] [33mWARN[39m (Sensores/1998 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650327311794] [33mWARN[39m (Sensores/1998 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650327311959] [33mWARN[39m (Sensores/1998 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650327355131] [33mWARN[39m (Sensores/1998 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650327355298] [33mWARN[39m (Sensores/1998 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650327382304] [33mWARN[39m (Sensores/1998 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650327382466] [33mWARN[39m (Sensores/1998 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650327462881] [33mWARN[39m (Sensores/1998 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650327463046] [33mWARN[39m (Sensores/1998 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650329323272] [33mWARN[39m (Sensores/1998 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650329323315] [31mERROR[39m (Sensores/1998 on ip-172-31-27-195): [36minsert into `usuarios` (`email`, `nombre`, `password`) values (DEFAULT, DEFAULT, DEFAULT) - ER_NO_DEFAULT_FOR_FIELD: Field 'email' doesn't have a default value[39m
+    err: {
+      "type": "Error",
+      "message": "insert into `usuarios` (`email`, `nombre`, `password`) values (DEFAULT, DEFAULT, DEFAULT) - ER_NO_DEFAULT_FOR_FIELD: Field 'email' doesn't have a default value",
+      "stack":
+          Error: ER_NO_DEFAULT_FOR_FIELD: Field 'email' doesn't have a default value
+              at Query.Sequence._packetToError (/home/ubuntu/Sensores/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+              at Query.ErrorPacket (/home/ubuntu/Sensores/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+              at Protocol._parsePacket (/home/ubuntu/Sensores/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+              at Parser._parsePacket (/home/ubuntu/Sensores/node_modules/mysql/lib/protocol/Parser.js:433:10)
+              at Parser.write (/home/ubuntu/Sensores/node_modules/mysql/lib/protocol/Parser.js:43:10)
+              at Protocol.write (/home/ubuntu/Sensores/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+              at Socket.<anonymous> (/home/ubuntu/Sensores/node_modules/mysql/lib/Connection.js:88:28)
+              at Socket.<anonymous> (/home/ubuntu/Sensores/node_modules/mysql/lib/Connection.js:526:10)
+              at Socket.emit (node:events:527:28)
+              at addChunk (node:internal/streams/readable:324:12)
+              --------------------
+              at Protocol._enqueue (/home/ubuntu/Sensores/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+              at Connection.query (/home/ubuntu/Sensores/node_modules/mysql/lib/Connection.js:198:25)
+              at /home/ubuntu/Sensores/node_modules/knex/lib/dialects/mysql/index.js:132:18
+              at new Promise (<anonymous>)
+              at Client_MySQL._query (/home/ubuntu/Sensores/node_modules/knex/lib/dialects/mysql/index.js:126:12)
+              at executeQuery (/home/ubuntu/Sensores/node_modules/knex/lib/execution/internal/query-executioner.js:37:17)
+              at Client_MySQL.query (/home/ubuntu/Sensores/node_modules/knex/lib/client.js:146:12)
+              at Runner.query (/home/ubuntu/Sensores/node_modules/knex/lib/execution/runner.js:130:36)
+              at ensureConnectionCallback (/home/ubuntu/Sensores/node_modules/knex/lib/execution/internal/ensure-connection-callback.js:13:17)
+              at Runner.ensureConnection (/home/ubuntu/Sensores/node_modules/knex/lib/execution/runner.js:289:14)
+      "code": "ER_NO_DEFAULT_FOR_FIELD",
+      "errno": 1364,
+      "sqlMessage": "Field 'email' doesn't have a default value",
+      "sqlState": "HY000",
+      "index": 0,
+      "sql": "insert into `usuarios` (`email`, `nombre`, `password`) values (DEFAULT, DEFAULT, DEFAULT)",
+      "status": 500
+    }
+UPDATE: app/Controllers/Http/UsuariosController.ts
+[ info ]  re-starting http server...
+[1650329357799] [32mINFO[39m (Sensores/2458 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
+╭─────────────────────────────────────────────────╮
+│                                                 │
+│    Server address: http://127.0.0.1:3333        │
+│    Watching filesystem for changes: YES         │
+│                                                 │
+╰─────────────────────────────────────────────────╯
+[1650329359891] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650329544476] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650330230067] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650330230234] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650330364303] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650330364477] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650330434023] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650330434188] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650331214438] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650331214608] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650331343320] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650331343485] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650331388270] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650331388433] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650331444537] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650331444701] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650331503975] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650331504137] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650331741356] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650331741521] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650331831705] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650331831897] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650332516022] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+[1650332516184] [33mWARN[39m (Sensores/2458 on ip-172-31-27-195): [36m.returning() is not supported by mysql and will not have any effect.[39m
+ADD: app/Models/Cervo.ts
+[ info ]  re-starting http server...
+UPDATE: app/Models/Cervo.ts
+[ info ]  re-starting http server...
+[1650333114849] [32mINFO[39m (Sensores/2982 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
+╭─────────────────────────────────────────────────╮
+│                                                 │
+│    Server address: http://127.0.0.1:3333        │
+│    Watching filesystem for changes: YES         │
+│                                                 │
+╰─────────────────────────────────────────────────╯
+UPDATE: app/Models/Cervo.ts
+[ info ]  re-starting http server...
+[1650333588429] [32mINFO[39m (Sensores/3365 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
+╭─────────────────────────────────────────────────╮
+│                                                 │
+│    Server address: http://127.0.0.1:3333        │
+│    Watching filesystem for changes: YES         │
+│                                                 │
+╰─────────────────────────────────────────────────╯
+ADD: app/Controllers/Http/ServosController.ts
+[ info ]  re-starting http server...
+UPDATE: app/Controllers/Http/ServosController.ts
+[ info ]  re-starting http server...
+[1650333652920] [32mINFO[39m (Sensores/3385 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
+╭─────────────────────────────────────────────────╮
+│                                                 │
+│    Server address: http://127.0.0.1:3333        │
+│    Watching filesystem for changes: YES         │
+│                                                 │
+╰─────────────────────────────────────────────────╯
+UPDATE: app/Controllers/Http/ServosController.ts
+[ info ]  re-starting http server...
+[1650334143959] [32mINFO[39m (Sensores/3769 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
+╭─────────────────────────────────────────────────╮
+│                                                 │
+│    Server address: http://127.0.0.1:3333        │
+│    Watching filesystem for changes: YES         │
+│                                                 │
+╰─────────────────────────────────────────────────╯
+UPDATE: start/routes.ts
+[ info ]  re-starting http server...
+[1650334245635] [32mINFO[39m (Sensores/3782 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
+╭─────────────────────────────────────────────────╮
+│                                                 │
+│    Server address: http://127.0.0.1:3333        │
+│    Watching filesystem for changes: YES         │
+│                                                 │
+╰─────────────────────────────────────────────────╯
+UPDATE: app/Controllers/Http/ServosController.ts
+[ info ]  re-starting http server...
+[1650334310797] [32mINFO[39m (Sensores/3792 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
+╭─────────────────────────────────────────────────╮
+│                                                 │
+│    Server address: http://127.0.0.1:3333        │
+│    Watching filesystem for changes: YES         │
+│                                                 │
+╰─────────────────────────────────────────────────╯
+[1650334323951] [31mERROR[39m (Sensores/3792 on ip-172-31-27-195): [36mCannot read properties of undefined (reading 'zone')[39m
+    err: {
+      "type": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'zone')",
+      "stack":
+          TypeError: Cannot read properties of undefined (reading 'zone')
+              at new DateTime (/home/ubuntu/Sensores/node_modules/luxon/src/datetime.js:424:25)
+              at ServosController.cambiarStatus (/home/ubuntu/Sensores/app/Controllers/Http/ServosController.ts:10:20)
+              at Injector.callAsync (/home/ubuntu/Sensores/node_modules/@adonisjs/fold/build/src/Ioc/Injector.js:124:30)
+              at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      "status": 500
+    }
+[1650334431432] [31mERROR[39m (Sensores/3792 on ip-172-31-27-195): [36mCannot read properties of undefined (reading 'zone')[39m
+    err: {
+      "type": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'zone')",
+      "stack":
+          TypeError: Cannot read properties of undefined (reading 'zone')
+              at new DateTime (/home/ubuntu/Sensores/node_modules/luxon/src/datetime.js:424:25)
+              at ServosController.cambiarStatus (/home/ubuntu/Sensores/app/Controllers/Http/ServosController.ts:10:20)
+              at Injector.callAsync (/home/ubuntu/Sensores/node_modules/@adonisjs/fold/build/src/Ioc/Injector.js:124:30)
+              at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      "status": 500
+    }
+[1650334434100] [31mERROR[39m (Sensores/3792 on ip-172-31-27-195): [36mCannot read properties of undefined (reading 'zone')[39m
+    err: {
+      "type": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'zone')",
+      "stack":
+          TypeError: Cannot read properties of undefined (reading 'zone')
+              at new DateTime (/home/ubuntu/Sensores/node_modules/luxon/src/datetime.js:424:25)
+              at ServosController.cambiarStatus (/home/ubuntu/Sensores/app/Controllers/Http/ServosController.ts:10:20)
+              at Injector.callAsync (/home/ubuntu/Sensores/node_modules/@adonisjs/fold/build/src/Ioc/Injector.js:124:30)
+              at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      "status": 500
+    }
+[1650334435376] [31mERROR[39m (Sensores/3792 on ip-172-31-27-195): [36mCannot read properties of undefined (reading 'zone')[39m
+    err: {
+      "type": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'zone')",
+      "stack":
+          TypeError: Cannot read properties of undefined (reading 'zone')
+              at new DateTime (/home/ubuntu/Sensores/node_modules/luxon/src/datetime.js:424:25)
+              at ServosController.cambiarStatus (/home/ubuntu/Sensores/app/Controllers/Http/ServosController.ts:10:20)
+              at Injector.callAsync (/home/ubuntu/Sensores/node_modules/@adonisjs/fold/build/src/Ioc/Injector.js:124:30)
+              at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      "status": 500
+    }
+[1650334559368] [31mERROR[39m (Sensores/3792 on ip-172-31-27-195): [36mCannot read properties of undefined (reading 'zone')[39m
+    err: {
+      "type": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'zone')",
+      "stack":
+          TypeError: Cannot read properties of undefined (reading 'zone')
+              at new DateTime (/home/ubuntu/Sensores/node_modules/luxon/src/datetime.js:424:25)
+              at ServosController.cambiarStatus (/home/ubuntu/Sensores/app/Controllers/Http/ServosController.ts:10:20)
+              at Injector.callAsync (/home/ubuntu/Sensores/node_modules/@adonisjs/fold/build/src/Ioc/Injector.js:124:30)
+              at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      "status": 500
+    }
+UPDATE: app/Controllers/Http/ServosController.ts
+[ info ]  re-starting http server...
+[1650334696562] [32mINFO[39m (Sensores/4198 on ip-172-31-27-195): [36mstarted server on 0.0.0.0:3333[39m
+╭─────────────────────────────────────────────────╮
+│                                                 │
+│    Server address: http://127.0.0.1:3333        │
+│    Watching filesystem for changes: YES         │
+│                                                 │
+╰─────────────────────────────────────────────────╯
+[1650334699810] [31mERROR[39m (Sensores/4198 on ip-172-31-27-195): [36mCannot access 'Date' before initialization[39m
+    err: {
+      "type": "ReferenceError",
+      "message": "Cannot access 'Date' before initialization",
+      "stack":
+          ReferenceError: Cannot access 'Date' before initialization
+              at ServosController.cambiarStatus (/home/ubuntu/Sensores/app/Controllers/Http/ServosController.ts:10:20)
+              at Injector.callAsync (/home/ubuntu/Sensores/node_modules/@adonisjs/fold/build/src/Ioc/Injector.js:124:30)
+              at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      "status": 500
+    }
