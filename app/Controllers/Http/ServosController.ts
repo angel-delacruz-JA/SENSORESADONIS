@@ -9,7 +9,15 @@ export default class ServosController
         try
         {
         await mongoose.connect('mongodb://18.220.12.4:27017/servos?readPreference=primary&directConnection=true&ssl=false')
-        response= await Cervos.Cervos.updateOne({"id":1},{$set:{"value":value}})
+        const status=await Cervos.Cervos.find()
+        if(status.value==1)
+        {
+            response= await Cervos.Cervos.updateOne({"id":1},{$set:{"value":0}})
+        }
+        else
+        {
+            response= await Cervos.Cervos.updateOne({"id":1},{$set:{"value":1}})
+        }
         return response
         }
         catch
