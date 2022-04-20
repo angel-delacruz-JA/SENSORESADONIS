@@ -4,6 +4,7 @@ export default class UsuariosController
 {
      public async store({auth,request,response})
     {
+        try{
         const user=new User()
 	const nombre=request.input('nombre')
         const email=request.input('email')
@@ -13,5 +14,9 @@ export default class UsuariosController
 	user.nombre=nombre 
         await user.save()
         return response.status(200)
+        }
+        catch{
+                return response.badRequest('Hubo un error')
+        }
     }
 }
