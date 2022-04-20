@@ -12,9 +12,6 @@ export default class SensoresController
         if(request.input('tipo')=='US'){
             imagen="https://rdteam.mx/shop/wp-content/uploads/2020/11/photo_A_OS-03261_SensorUltrasonico_HC-SR04_01_700x700.png"
         }
-        if(request.input('tipo')=='TEMP'||'HUM'){
-            imagen="https://ae01.alicdn.com/kf/H8d8d40d77d774ef7aba3077d2e1774b1l/1-M-dulo-de-Sensor-de-humedad-y-temperatura-DHT11-H-best.jpg_Q90.jpg_.webp"
-        }
         if(request.input('tipo')=='GAS'){
             imagen="https://naylampmechatronics.com/img/cms/Blog/Tutorial%20MQ/sensor%20MQ.jpg"
         }
