@@ -121,4 +121,48 @@ export default class SensoresController
             return response
     }
 }
+        public async US({params,response})
+        {
+            try
+            {
+                await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+                response=await Valore.Valore.aggregate([
+                    {
+                      '$match': {
+                        'id': Number(params.id)
+                      }
+                    }, {
+                      $lookup: {
+                        'from': 'sensors', 
+                        'localField': 'id', 
+                        'foreignField': 'id', 
+                        'as': 'Sensores'
+                      }
+                    }, {
+                      '$unwind': {
+                        'path': '$Sensores', 
+                        'preserveNullAndEmptyArrays': true
+                      }
+                    }, {
+                      '$project': {
+                        'id': 1, 
+                        'clave': 1, 
+                        'valor': 1, 
+                        'created_at': {
+                          '$concat': [
+                            '$fecha', ' ', '$hora'
+                          ]
+                        }
+                      }
+                    }
+                ])
+                return response
+            }
+            catch
+            {
+                await mongoose.connect('mongodb://3.145.210.35:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+                response=await Valore.Valore.aggregate()
+                return response
+            }
+        }
 } 
