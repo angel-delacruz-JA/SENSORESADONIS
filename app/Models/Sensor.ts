@@ -5,7 +5,8 @@ export default class SensorModelo
     id:Number,
     pin:[{trigger:Number,echo:Number}],
     tipo:String,
-    clave:String
+    clave:String,
+    imagen:String
   },{
     versionKey:false
   });

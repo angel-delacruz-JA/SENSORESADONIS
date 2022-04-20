@@ -7,7 +7,20 @@ export default class SensoresController
         public async guardarMongo({request,response})
     {  
         const trigger=request.input('trigger')
-        const echo=request.input('echo')  
+        const echo=request.input('echo')
+        let imagen:any
+        if(request.input('tipo')=='US'){
+            imagen="https://rdteam.mx/shop/wp-content/uploads/2020/11/photo_A_OS-03261_SensorUltrasonico_HC-SR04_01_700x700.png"
+        }
+        if(request.input('tipo')=='TEMP'||'HUM'){
+            imagen="https://ae01.alicdn.com/kf/H8d8d40d77d774ef7aba3077d2e1774b1l/1-M-dulo-de-Sensor-de-humedad-y-temperatura-DHT11-H-best.jpg_Q90.jpg_.webp"
+        }
+        if(request.input('tipo')=='GAS'){
+            imagen="https://naylampmechatronics.com/img/cms/Blog/Tutorial%20MQ/sensor%20MQ.jpg"
+        }
+        if(request.input('tipo')=='PIR'){
+            imagen="https://www.hwlibre.com/wp-content/uploads/2021/02/sensor-pir-1024x614.jpg.webp"
+        }
         try
         {
             await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false') 
@@ -19,6 +32,7 @@ export default class SensoresController
                 }],
                 "tipo": request.input('tipo'),
                 "clave": request.input('clave'),
+                "imagen":imagen
             })
             response.save()
             return response
@@ -34,6 +48,7 @@ export default class SensoresController
                 ],
                 "tipo": request.input('tipo'),
                 "clave": request.input('clave'),
+                "imagen":imagen
             })
             response.save()
             return response
