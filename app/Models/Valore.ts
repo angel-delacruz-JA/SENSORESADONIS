@@ -7,7 +7,8 @@ export default class Valore {
     clave:String,
     hora:String,
     valor:Number,
-    valor2:String
+    valor2:String,
+    idx:String
   },{
     versionKey:false
   });
