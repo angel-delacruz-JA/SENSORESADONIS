@@ -120,7 +120,8 @@ export default class SensoresController
                 "fecha":fecha,
                 "clave": clave,
                 "hora":hora,
-                "valor":valor
+                "valor":valor,
+                "valor2":valor
             })
             response.save()
             return response

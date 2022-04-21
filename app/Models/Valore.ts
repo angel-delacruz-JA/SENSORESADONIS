@@ -6,7 +6,8 @@ export default class Valore {
     fecha:String,
     clave:String,
     hora:String,
-    valor:Number
+    valor:Number,
+    valor2:String
   },{
     versionKey:false
   });
