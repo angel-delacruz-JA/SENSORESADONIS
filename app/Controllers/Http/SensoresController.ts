@@ -171,7 +171,8 @@ export default class SensoresController
                           '$concat': [
                             '$fecha', ' ', '$hora'
                           ]
-                        }
+                        },
+                        'valor2':1
                       }
                     }
                 ])
