@@ -108,6 +108,7 @@ export default class SensoresController
         public async guardarMedicion({request,response})
     {
         const id=request.input('id')
+        const idx=request.input('idx')
         const clave=request.input('clave')
         const fecha=request.input('fecha')
         const hora=request.input('hora')
@@ -117,6 +118,7 @@ export default class SensoresController
             await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false') 
              response=new Valore.Valore({
                 "id": id,
+                "idx":idx,
                 "fecha":fecha,
                 "clave": clave,
                 "hora":hora,
@@ -131,10 +133,12 @@ export default class SensoresController
             await mongoose.connect('mongodb://3.145.210.35:27017/Sensores?readPreference=primary&directConnection=true&ssl=false') 
              response=new Valore.Valore({
                 "id": id,
+                "idx":idx,
                 "fecha":fecha,
                 "clave": clave,
                 "hora":hora,
-                "valor":valor
+                "valor":valor,
+                "valor2":valor
             })
             response.save()
             return response
@@ -149,6 +153,51 @@ export default class SensoresController
                     {
                       '$match': {
                         'id': Number(params.id)
+                      }
+                    }, {
+                      $lookup: {
+                        'from': 'sensors', 
+                        'localField': 'id', 
+                        'foreignField': 'id', 
+                        'as': 'Sensores'
+                      }
+                    }, {
+                      '$unwind': {
+                        'path': '$Sensores', 
+                        'preserveNullAndEmptyArrays': true
+                      }
+                    }, {
+                      '$project': {
+                        'id': 1, 
+                        'clave': 1, 
+                        'valor': 1, 
+                        'created_at': {
+                          '$concat': [
+                            '$fecha', ' ', '$hora'
+                          ]
+                        },
+                        'valor2':1
+                      }
+                    }
+                ])
+                return response
+            }
+            catch
+            {
+                await mongoose.connect('mongodb://3.145.210.35:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+                response=await Valore.Valore.aggregate()
+                return response
+            }
+        }
+        public async values({params,response})
+        {
+            try
+            {
+                await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+                response=await Valore.Valore.aggregate([
+                    {
+                      '$match': {
+                        'idx': params.id
                       }
                     }, {
                       $lookup: {
