@@ -36,6 +36,7 @@ export default class SensoresController
             console.log(cantidad)
             response=new SensorModelo.SensorModelo({
                 "id": id,
+                "idx":id,
                 "pin": [{
                    "trigger":trigger,
                    "echo":echo
@@ -59,6 +60,7 @@ export default class SensoresController
           console.log(cantidad)
           response=new SensorModelo.SensorModelo({
               "id": id,
+              "idx":id,
               "pin": [{
                  "trigger":trigger,
                  "echo":echo
