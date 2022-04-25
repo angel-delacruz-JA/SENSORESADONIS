@@ -71,6 +71,21 @@ export default class SensoresController
           return response
     }
   }
+    public async borrarSensor({params,response})
+    {
+      try
+      {
+          await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+          response=await SensorModelo.SensorModelo.deleteOne({"id":params.id})
+          return response
+      }
+      catch
+      {
+          await mongoose.connect('mongodb://3.145.210.35:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+          response=await SensorModelo.SensorModelo.deleteOne({"id":params.id})
+          return response
+      }
+    }
     public async verSensor({params,response})
     {
         try

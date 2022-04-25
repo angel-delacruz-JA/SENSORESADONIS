@@ -28,6 +28,7 @@ Route.group(()=>{
     Route.get('/cambiarStatus','ServosController.cambiarStatus')
     Route.get('/obtenerStatus','ServosController.obtenerStatus')
     Route.get('/valoresSensores/:id','SensoresController.US')
+    Route.delete('/borrarSensor/:id','SensoresController.borrarSensor')
     Route.get('/valoresSensoresx/:id','SensoresController.values')
     Route.get('/logout','AuthController.Logout')
 }).middleware('auth:api')
