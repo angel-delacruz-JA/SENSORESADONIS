@@ -27,8 +27,15 @@ export default class SensoresController
         try
         {
             await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false') 
-             response=new SensorModelo.SensorModelo({
-                "id": request.input('id'),
+            let cant=await SensorModelo.SensorModelo.aggregate([ {
+              '$count': 'id'
+            }]) 
+            let canti=cant[0]
+            let cantidad=canti.id
+            let id=cantidad+1
+            console.log(cantidad)
+            response=new SensorModelo.SensorModelo({
+                "id": id,
                 "pin": [{
                    "trigger":trigger,
                    "echo":echo
@@ -42,21 +49,28 @@ export default class SensoresController
         }
         catch
         {
-            await mongoose.connect('mongodb://3.145.210.35:27017/Sensores?readPreference=primary&directConnection=true&ssl=false') 
-             response=new SensorModelo.SensorModelo({
-                "id": request.input('id'),
-                "pin": [
-                    trigger,
-                    echo
-                ],
-                "tipo": request.input('tipo'),
-                "clave": request.input('clave'),
-                "imagen":imagen
-            })
-            response.save()
-            return response
-        }
+          await mongoose.connect('mongodb://3.145.210.35:27017/Sensores?readPreference=primary&directConnection=true&ssl=false') 
+          let cant=await SensorModelo.SensorModelo.aggregate([ {
+            '$count': 'id'
+          }]) 
+          let canti=cant[0]
+          let cantidad=canti.id
+          let id=cantidad+1
+          console.log(cantidad)
+          response=new SensorModelo.SensorModelo({
+              "id": id,
+              "pin": [{
+                 "trigger":trigger,
+                 "echo":echo
+              }],
+              "tipo": request.input('tipo'),
+              "clave": request.input('clave'),
+              "imagen":imagen
+          })
+          response.save()
+          return response
     }
+  }
     public async verSensor({params,response})
     {
         try
@@ -105,7 +119,7 @@ export default class SensoresController
 //            return response
         }
     }
-        public async guardarMedicion({request,response})
+    public async guardarMedicion({request,response})
     {
         const id=request.input('id')
         const idx=request.input('idx')
@@ -113,6 +127,7 @@ export default class SensoresController
         const fecha=request.input('fecha')
         const hora=request.input('hora')
         const valor=request.input('valor')
+
         try
         {
             await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false') 
