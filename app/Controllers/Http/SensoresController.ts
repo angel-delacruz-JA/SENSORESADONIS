@@ -26,7 +26,7 @@ export default class SensoresController
         }
         try
         {
-            await mongoose.createConnection('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false') 
+            await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false') 
             let cant=await SensorModelo.SensorModelo.aggregate([ {
               '$count': 'id'
             }]) 
@@ -50,7 +50,7 @@ export default class SensoresController
         }
         catch
         {
-          await mongoose.createConnection('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false') 
+          await mongoose.connect('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false') 
           let cant=await SensorModelo.SensorModelo.aggregate([ {
             '$count': 'id'
           }]) 
@@ -146,7 +146,7 @@ export default class SensoresController
 
         try
         {
-            await mongoose.createConnection('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false') 
+            await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false') 
              response=new Valore.Valore({
                 "id": id,
                 "idx":idx,
@@ -161,7 +161,7 @@ export default class SensoresController
         }
         catch
         {
-            await mongoose.createConnection('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false') 
+            await mongoose.connect('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false') 
              response=new Valore.Valore({
                 "id": id,
                 "idx":idx,
@@ -179,7 +179,7 @@ export default class SensoresController
         {
             try
             {
-                await mongoose.createConnection('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+                await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
                 response=await Valore.Valore.aggregate([
                     {
                       '$match': {
@@ -215,7 +215,7 @@ export default class SensoresController
             }
             catch
             {
-                await mongoose.createConnection('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+                await mongoose.connect('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
                 response=await Valore.Valore.aggregate([
                   {
                     '$match': {
@@ -254,7 +254,7 @@ export default class SensoresController
         {
             try
             {
-                await mongoose.createConnection('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+                await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
                 response=await Valore.Valore.aggregate([
                     {
                       '$match': {
@@ -290,7 +290,7 @@ export default class SensoresController
             }
             catch
             {
-                await mongoose.createConnection('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+                await mongoose.connect('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
                 response=await Valore.Valore.aggregate([
                     {
                       '$match': {

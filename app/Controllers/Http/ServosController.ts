@@ -49,7 +49,7 @@ export default class ServosController
     {
         try
         {
-            await mongoose.createConnection('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+            await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
             response= await Cervos.Cervos.find()
             const status=response[0]
             const value=status['value']
@@ -57,7 +57,7 @@ export default class ServosController
         }
         catch
         {
-            await mongoose.createConnection('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+            await mongoose.connect('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
             response= await Cervos.Cervos.find()
             const status=response[0]
             const value=status['value']
