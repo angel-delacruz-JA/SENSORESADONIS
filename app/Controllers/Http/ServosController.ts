@@ -8,18 +8,18 @@ export default class ServosController
         const value=request.input('value')
         try
         {
-        await mongoose.createConnection('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+        await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
         const status=await Cervos.Cervos.find()
         const value=status[0]
         if(value['value']==1)
         {
-            await mongoose.createConnection('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+            await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
             response= await Cervos.Cervos.updateOne({"id":1},{$set:{"value":0}})
             return response
         }
         else
         {
-            await mongoose.createConnection('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+            await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
             response= await Cervos.Cervos.updateOne({"id":1},{$set:{"value":1}})
             return response
         }
@@ -27,22 +27,21 @@ export default class ServosController
         }
         catch
         {
-            await mongoose.createConnection('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
-        const status=await Cervos.Cervos.find()
-        const value=status[0]
-        if(value['value']==1)
-        {
-            await mongoose.createConnection('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
-            response= await Cervos.Cervos.updateOne({"id":1},{$set:{"value":0}})
-            return response
-        }
-        else
-        {
-            await mongoose.createConnection('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
-            response= await Cervos.Cervos.updateOne({"id":1},{$set:{"value":1}})
-            return response
-        }
-        return response
+            await mongoose.connect('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+            const status=await Cervos.Cervos.find()
+            const value=status[0]
+            if(value['value']==1)
+            {
+                await mongoose.connect('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+                response= await Cervos.Cervos.updateOne({"id":1},{$set:{"value":0}})
+                return response
+            }
+            else
+            {
+                await mongoose.connect('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+                response= await Cervos.Cervos.updateOne({"id":1},{$set:{"value":1}})
+                return response
+            }
         }
     }
     public async obtenerStatus({response})
@@ -57,7 +56,7 @@ export default class ServosController
         }
         catch
         {
-            await mongoose.connect('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+            await mongoose.connect('mongodb://18.220.12.4:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
             response= await Cervos.Cervos.find()
             const status=response[0]
             const value=status['value']

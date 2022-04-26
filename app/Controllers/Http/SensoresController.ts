@@ -83,7 +83,7 @@ export default class SensoresController
       }
       catch
       {
-          await mongoose.connect('mongodb://3.145.210.35:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+          await mongoose.connect('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
           response=await SensorModelo.SensorModelo.deleteOne({"id":params.id})
           return response
       }
@@ -98,7 +98,7 @@ export default class SensoresController
         }
         catch
         {
-            await mongoose.connect('mongodb://3.145.210.35:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+            await mongoose.connect('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
             response=await SensorModelo.SensorModelo.find({"id":params.id})
             return response
         }
@@ -215,8 +215,8 @@ export default class SensoresController
             }
             catch
             {
-                await mongoose.connect('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
-                response=await Valore.Valore.aggregate([
+              await mongoose.connect('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
+              response=await Valore.Valore.aggregate([
                   {
                     '$match': {
                       'id': Number(params.id)
