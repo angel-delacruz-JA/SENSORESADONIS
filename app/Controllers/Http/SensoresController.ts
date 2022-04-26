@@ -262,10 +262,10 @@ export default class SensoresController
                 response=await Valore.Valore.aggregate([
                   {
                     '$match': {
-                      'idx':params.id
+                      'id': 1
                     }
                   }, {
-                    $lookup: {
+                    '$lookup': {
                       'from': 'sensors', 
                       'localField': 'id', 
                       'foreignField': 'id', 
@@ -278,53 +278,61 @@ export default class SensoresController
                     }
                   }, {
                     '$project': {
-                      'idx': 1, 
+                      'id': 1, 
                       'clave': 1, 
                       'valor': 1, 
                       'created_at': {
                         '$concat': [
                           '$fecha', ' ', '$hora'
                         ]
-                      },
-                      'valor2':1
+                      }, 
+                      'valor2': 1
+                    }
+                  }, {
+                    '$sort': {
+                      'created_at': -1
                     }
                   }
-              ])
+                ])
                 return response
             }
             catch
             {
               await mongoose.connect('mongodb://3.14.126.88:27017/Sensores?readPreference=primary&directConnection=true&ssl=false')
               response=await Valore.Valore.aggregate([
-                  {
-                    '$match': {
-                      'idx':params.id
-                    }
-                  }, {
-                    $lookup: {
-                      'from': 'sensors', 
-                      'localField': 'id', 
-                      'foreignField': 'id', 
-                      'as': 'Sensores'
-                    }
-                  }, {
-                    '$unwind': {
-                      'path': '$Sensores', 
-                      'preserveNullAndEmptyArrays': true
-                    }
-                  }, {
-                    '$project': {
-                      'idx': 1, 
-                      'clave': 1, 
-                      'valor': 1, 
-                      'created_at': {
-                        '$concat': [
-                          '$fecha', ' ', '$hora'
-                        ]
-                      },
-                      'valor2':1
-                    }
+                {
+                  '$match': {
+                    'id': 1
                   }
+                }, {
+                  '$lookup': {
+                    'from': 'sensors', 
+                    'localField': 'id', 
+                    'foreignField': 'id', 
+                    'as': 'Sensores'
+                  }
+                }, {
+                  '$unwind': {
+                    'path': '$Sensores', 
+                    'preserveNullAndEmptyArrays': true
+                  }
+                }, {
+                  '$project': {
+                    'id': 1, 
+                    'clave': 1, 
+                    'valor': 1, 
+                    'created_at': {
+                      '$concat': [
+                        '$fecha', ' ', '$hora'
+                      ]
+                    }, 
+                    'valor2': 1
+                  }
+                }, {
+                  '$sort': {
+                    'created_at': -1
+                  }
+                }
               ])
                 return response
             }
